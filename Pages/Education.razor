@@ -1,6 +1,110 @@
 @page "/Education"
-<h3>Education</h3>
+<div class="container mt-5">
+    <h2 class="mb-4">Education</h2>
+    @foreach (var entry in educationList)
+    {
+        <div class="row mb-5 align-items-start">
+            <!-- Left: Degree -->
+            <div class="col-md-4 mb-3">
+                <h5 class="d-flex align-items-center">
+                    <i class="bi bi-briefcase m-2 text-secondary"></i>
+                    @entry.Degree
+                </h5>
+                <p class="text-muted">@entry.Institution</p>
+                <p class="text-muted">@entry.Period</p>
+            </div>
+
+            <!-- Right: Institution Info -->
+            <div class="col-md-8">
+                <h5 class="d-flex align-items-center">
+                    <i class="bi bi-building m-2 text-secondary"></i>
+                    @entry.Institution
+                </h5>
+                <ul class="ms-4">
+                    @foreach (var detail in entry.Details)
+                    {
+                        <li>@detail</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+
+   <h2 class="mt-5">Language</h2>
+       @foreach (var language in languageList)
+       {
+           <div class="row mb-4">
+               <div class="col-md-4">
+                   <h5 class="d-flex align-items-center">
+                       <i class="bi bi-globe m-2 text-secondary"></i>
+                       @language.Name
+                   </h5>
+                   <p class="text-muted">@language.Level</p>
+               </div>
+           </div>
+       }
+</div>
 
 @code {
-    
+    private class EducationEntry
+    {
+        public string Degree { get; set; } = string.Empty;
+        public string Institution { get; set; } = string.Empty;
+        public string Period { get; set; } = string.Empty;
+        public List<string> Details { get; set; } = new();
+    }
+
+    private class LanguageEntry
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Level { get; set; } = string.Empty;
+    }
+
+    private List<EducationEntry> educationList = new()
+    {
+        new EducationEntry {
+            Degree = "Bachelor in Informatics and Computer Science",
+            Institution = "Igor Sikorsky Kyiv Polytechnic Institute – Faculty of Informatics and Computer Science, Kyiv, Ukraine",
+            Period = "2017 – 2021",
+            Details = new List<string>
+            {
+                "Specialized in software development and computer science."
+            }
+        },
+        new EducationEntry {
+            Degree = "Mobile Development for Android",
+            Institution = "STEP IT Academy, Donetsk, Ukraine",
+            Period = "2013 – 2014",
+            Details = new List<string>
+            {
+                "Focused on mobile development and Android apps."
+            }
+        },
+        new EducationEntry {
+            Degree = "Bachelor in International Economics",
+            Institution = "National University, Donetsk, Ukraine",
+            Period = "2008 – 2012",
+            Details = new List<string>
+            {
+                "Studied economics and business management."
+            }
+        },
+        new EducationEntry {
+            Degree = "Primary- / Secondary School",
+            Institution = "Donetsk, Ukraine",
+            Period = "1997 – 2007",
+            Details = new List<string>
+            {
+                "Basic education and development."
+            }
+        }
+    };
+
+    private List<LanguageEntry> languageList = new()
+    {
+        new LanguageEntry { Name = "Ukrainian", Level = "Mother tongue" },
+        new LanguageEntry { Name = "German", Level = "Level A2, constant learning (private lessons)" },
+        new LanguageEntry { Name = "Russian", Level = "Mother tongue" },
+        new LanguageEntry { Name = "English", Level = "Advanced, Level C1" }
+    };
 }

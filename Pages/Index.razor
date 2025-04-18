@@ -1,157 +1,128 @@
 ﻿@page "/"
 
 <div class="container mt-5">
-    <div class="row">
-        <!-- Left Column: Tech Stack per Company -->
-        <div class="col-lg-4 mb-4">
-            <h3><i class="bi bi-tools me-2"></i>Tech Stack</h3>
-
-            <div class="mb-4">
-                <h6>Abona Deutschland GmbH</h6>
-                <ul class="list-unstyled">
-                    <li>C#</li>
-                    <li>Blazor Server</li>
-                    <li>Bootstrap</li>
-                    <li>Dynamsoft</li>
-                    <li>HereMaps</li>
-                    <li>Android Jetpack</li>
-                    <li>Azure DevOps</li>
+    <h2 class="mb-4">Experience</h2>
+    @foreach (var entry in experienceList)
+    {
+        <div class="row mb-5 align-items-start">
+            <!-- Left: Tech Stack -->
+            <div class="col-md-4 mb-3">
+                <h5 class="d-flex align-items-center">
+                    <i class="bi bi-tools m-2 text-secondary"></i>
+                    Tech Stack
+                </h5>
+                <ul class="list-unstyled ms-4">
+                    @foreach (var tech in entry.TechStack)
+                    {
+                        <li>@tech</li>
+                    }
                 </ul>
             </div>
 
-            <div class="mb-4">
-                <h6>KIVI TV</h6>
-                <ul class="list-unstyled">
-                    <li>Kotlin</li>
-                    <li>Android Jetpack</li>
-                    <li>AOSP</li>
-                    <li>RxJava</li>
-                    <li>Dagger</li>
-                    <li>Bash Scripts</li>
-                    <li>Jenkins</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h6>MySwit (Freelance)</h6>
-                <ul class="list-unstyled">
-                    <li>Realm DB</li>
-                    <li>Google Maps API</li>
-                    <li>FCM</li>
-                    <li>Crashlytics</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h6>Ozon Ltd.</h6>
-                <ul class="list-unstyled">
-                    <li>Java</li>
-                    <li>SQLite</li>
-                    <li>Firebase Cloud Messaging</li>
-                    <li>Canvas API</li>
-                    <li>Fabric.IO</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h6>OneTrack LLC</h6>
-                <ul class="list-unstyled">
-                    <li>BLE Integration</li>
-                    <li>FatSecret API</li>
-                    <li>SQLite</li>
-                    <li>Google Protobuf</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h6>Admobiclic LLC</h6>
-                <ul class="list-unstyled">
-                    <li>Facebook Ads</li>
-                    <li>VK Ads</li>
-                    <li>Opera Mediaworks</li>
-                    <li>CPM/CPC/CPA Analysis</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h6>IDS Outsource</h6>
-                <ul class="list-unstyled">
-                    <li>Client Communication</li>
-                    <li>Project Estimation</li>
-                    <li>Team Coordination</li>
+            <!-- Right: Experience -->
+            <div class="col-md-8">
+                <h5 class="d-flex align-items-center">
+                    <i class="bi bi-briefcase m-2 text-secondary"></i>
+                    @entry.Company
+                </h5>
+                <p class="text-muted">@entry.Period</p>
+                <ul class="ms-4">
+                    @foreach (var detail in entry.Details)
+                    {
+                        <li>@detail</li>
+                    }
                 </ul>
             </div>
         </div>
-
-        <!-- Right Column: Experience -->
-        <div class="col-lg-8">
-            <h3><i class="bi bi-briefcase me-2"></i>Experience</h3>
-
-            <div class="mb-4">
-                <h5>Senior Android Developer</h5>
-                <p><strong>Abona Deutschland GmbH</strong> – 07.2020 to Present</p>
-                <ul>
-                    <li>Developed DriverWeb: a Blazor-based logistics tool with HereMaps integration.</li>
-                    <li>Implemented document scanning using Dynamsoft and JS Interop.</li>
-                    <li>Built Android DriverApp for real-time location tracking via sockets.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Middle Android Developer</h5>
-                <p><strong>KIVI TV</strong> – 10.2017 to 06.2020</p>
-                <ul>
-                    <li>Developed OTA and APK update manager applications.</li>
-                    <li>Created Kivi Remote and Server for TV settings management and user suggestions.</li>
-                    <li>Provided architecture documentation support for the iOS development team.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Middle Android Developer (Freelance)</h5>
-                <p><strong>MySwit</strong> – 11.2016 to 10.2017</p>
-                <ul>
-                    <li>Developed dual applications: user and shop assistant interfaces.</li>
-                    <li>Integrated Google Maps and Directions API for sales mapping.</li>
-                    <li>Utilized Realm for user profiles and FCM for push notifications.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Android Developer</h5>
-                <p><strong>Ozon Ltd.</strong> – 11.2015 to 11.2016</p>
-                <ul>
-                    <li>Developed a travel app for fare comparison, user history, and FCM alerts.</li>
-                    <li>Implemented SQLite, Fabric.IO, and custom animation frameworks.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Android Developer</h5>
-                <p><strong>OneTrack LLC</strong> – 04.2015 to 11.2015</p>
-                <ul>
-                    <li>Built OneTrak fitness tracker app with BLE bracelet support.</li>
-                    <li>Implemented calorie counter, sleep monitoring, and food diary features.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Digital Media Buyer</h5>
-                <p><strong>Admobiclic LLC</strong> – 06.2014 to 04.2015</p>
-                <ul>
-                    <li>Managed ad campaigns and traffic optimization across platforms.</li>
-                    <li>Worked with key providers: Facebook, VK, Opera Mediaworks, Twitter.</li>
-                </ul>
-            </div>
-
-            <div class="mb-4">
-                <h5>Sales & Marketing Manager</h5>
-                <p><strong>IDS Outsource</strong> – 10.2013 to 05.2014</p>
-                <ul>
-                    <li>Handled project estimation, Upwork bidding, and team-client coordination.</li>
-                    <li>Managed issue resolution and delivery success tracking.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    }
 </div>
+
+@code {
+    private class ExperienceEntry
+    {
+        public string Company { get; set; } = string.Empty;
+        public string Period { get; set; } = string.Empty;
+        public List<string> TechStack { get; set; } = new();
+        public List<string> Details { get; set; } = new();
+    }
+
+    private List<ExperienceEntry> experienceList = new()
+    {
+        new ExperienceEntry {
+            Company = "Abona Deutschland GmbH",
+            Period = "07.2020 – Present",
+            TechStack = new List<string> { "C#", "Blazor Server", "Bootstrap", "Dynamsoft", "HereMaps", "Android Jetpack", "Azure DevOps" },
+            Details = new List<string>
+            {
+                "DriverWeb: Blazor-based logistics tool with HereMaps.",
+                "Document scanner using Dynamsoft and JS Interop.",
+                "Android DriverApp for live location via sockets."
+            }
+        },
+        new ExperienceEntry {
+            Company = "KIVI TV",
+            Period = "10.2017 – 06.2020",
+            TechStack = new() { "Kotlin", "Android Jetpack", "AOSP", "RxJava", "Dagger", "Bash Scripts", "Jenkins" },
+            Details = new() {
+                "Developed OTA and APK update apps with progress UI.",
+                "Created Kivi Remote & Server for TV settings & recommendations.",
+                "Assisted iOS team with documentation and integration."
+            }
+        },
+        new ExperienceEntry {
+            Company = "MySwit (Freelance)",
+            Period = "11.2016 – 10.2017",
+            TechStack = new List<string> { "Realm DB", "Google Maps API", "FCM", "Crashlytics" },
+            Details = new List<string>
+            {
+                "Built two Android apps for users and shop assistants.",
+                "Integrated Google Maps & Directions API for promo displays.",
+                "Used Realm for profiles and FCM for event push notifications."
+            }
+        },
+        new ExperienceEntry {
+            Company = "Ozon Ltd.",
+            Period = "11.2015 – 11.2016",
+            TechStack = new List<string> { "Java", "SQLite", "FCM", "Canvas API", "Fabric.IO" },
+            Details = new List<string>
+            {
+                "Developed travel app for flight fares and alerts.",
+                "Implemented animated UI with Canvas API and Fabric.io.",
+                "Used FCM for real-time flight status notifications."
+            }
+        },
+        new ExperienceEntry {
+            Company = "OneTrack LLC",
+            Period = "04.2015 – 11.2015",
+            TechStack = new List<string> { "BLE", "FatSecret API", "SQLite", "Google Protobuf" },
+            Details = new List<string>
+            {
+                "Built OneTrak fitness app for BLE bracelet tracking.",
+                "Calories, sleep, and food tracking with SQLite + APIs.",
+                "Protocol buffer-based server communication."
+            }
+        },
+        new ExperienceEntry {
+            Company = "Admobiclic LLC",
+            Period = "06.2014 – 04.2015",
+            TechStack = new List<string> { "Facebook Ads", "VK", "Twitter", "Opera Mediaworks", "CPM/CPC/CPA Analysis" },
+            Details = new List<string>
+            {
+                "Managed mobile ad campaigns across major networks.",
+                "Optimized traffic and user acquisition strategy.",
+                "Analytics for app performance and monetization."
+            }
+        },
+        new ExperienceEntry {
+            Company = "IDS Outsource",
+            Period = "10.2013 – 05.2014",
+            TechStack = new List<string> { "Client Communication", "Team Coordination", "Project Estimation" },
+            Details = new List<string>
+            {
+                "Managed clients on Upwork (Elance).",
+                "Scoped projects and negotiated with dev teams.",
+                "Ensured smooth delivery and success tracking."
+            }
+        }
+    };
+}
