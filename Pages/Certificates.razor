@@ -1,6 +1,37 @@
 @page "/Certificates"
-<h3>Certificates</h3>
 
+<div class="container mt-5">
+    <h2 class="mb-4">Certificates</h2>
+    <ul class="list-unstyled ms-2">
+        @foreach (var cert in certificateList)
+        {
+            <li class="mb-3">
+                <a href="@cert.Link" target="_blank" class="text-decoration-none">
+                    <i class="bi bi-award-fill text-primary me-2"></i>@cert.Title
+                </a>
+            </li>
+        }
+    </ul>
+</div>
 @code {
-    
+    private class Certificate
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Link { get; set; } = string.Empty;
+    }
+
+    private List<Certificate> certificateList = new()
+    {
+        new Certificate { Title = "SQL for Data Science", Link = "https://www.coursera.org/account/accomplishments/certificate/92GXR4B5K6UR" },
+        new Certificate { Title = "Introduction to Numerical Analysis", Link = "https://www.coursera.org/account/accomplishments/certificate/4XKY9AUKJPW9" },
+        new Certificate { Title = "Object-Oriented Data Structures in C++", Link = "https://www.coursera.org/account/accomplishments/certificate/EWVRTGYFASSB" },
+        new Certificate { Title = "TCP/IP and Advanced Topics", Link = "https://www.coursera.org/account/accomplishments/certificate/KK9J38LXX7QP" },
+        new Certificate { Title = "Sequences, Time Series and Prediction", Link = "https://www.coursera.org/account/accomplishments/certificate/BQZ4RUQBGN7P" },
+        new Certificate { Title = "Advanced Linear Models for Data Science 1: Least Squares", Link = "https://www.coursera.org/account/accomplishments/certificate/JRHGAC5VNN2H" },
+        new Certificate { Title = "Software Development Processes and Methodologies", Link = "https://www.coursera.org/account/accomplishments/certificate/PA55ZHP2EDCD" },
+        new Certificate { Title = "Text Mining and Analytics", Link = "https://www.coursera.org/account/accomplishments/certificate/VRYD3YNNPYDR" },
+        new Certificate { Title = "Machine Learning with Python", Link = "https://www.coursera.org/account/accomplishments/certificate/AFF4PUAJL3EE" },
+        new Certificate { Title = "Structuring Machine Learning Projects", Link = "https://www.coursera.org/account/accomplishments/certificate/FHWWS7LRKQ7C" },
+        new Certificate { Title = "Natural Language Processing in TensorFlow", Link = "https://www.coursera.org/account/accomplishments/certificate/T5AFVMT7ZNLW" }
+    };
 }
