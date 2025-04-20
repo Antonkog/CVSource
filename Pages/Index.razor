@@ -51,12 +51,12 @@
         new ExperienceEntry {
             Company = "Abona Deutschland GmbH",
             Period = "07.2020 – Present",
-            TechStack = new List<string> { "C#", "Blazor Server", "Bootstrap", "Dynamsoft", "HereMaps", "Android Jetpack", "Azure DevOps" },
-            Details = new List<string>
-            {
-                "DriverWeb: Blazor-based logistics tool with HereMaps.",
-                "Document scanner using Dynamsoft and JS Interop.",
-                "Android DriverApp for live location via sockets."
+            TechStack = new() { "C#", "Blazor Server", "Bootstrap", "Dynamsoft", "HereMaps", "Android Jetpack", "Azure DevOps" },
+            Details = new() {
+                "Built DriverApp, an Android solution for order tracking, document handling, activity logging, and real-time location reporting via sockets.",
+                "Implemented FCM task notifications, navigation with external apps, error/crash reporting via Firebase, and analytics logging.",
+                "Most features were migrated to DriverWeb — a Blazor-based app with HereMaps integration, document scanner, and live logistics control.",
+                "Also developed a navigation companion app launched via deep link from DriverWeb, delivering turn-by-turn guidance and location updates."
             }
         },
         new ExperienceEntry {
@@ -83,12 +83,12 @@
         new ExperienceEntry {
             Company = "Ozon Ltd.",
             Period = "11.2015 – 11.2016",
-            TechStack = new List<string> { "Java", "SQLite", "FCM", "Canvas API", "Fabric.IO" },
-            Details = new List<string>
-            {
-                "Developed travel app for flight fares and alerts.",
-                "Implemented animated UI with Canvas API and Fabric.io.",
-                "Used FCM for real-time flight status notifications."
+            TechStack = new() { "Java", "SQLite", "FCM", "Canvas API", "Fabric.IO", "MobileML", "XML" },
+            Details = new() {
+                "Built a travel app for comparing flight fares and managing bookings.",
+                "Created interactive seat selection by parsing XML layouts and rendering them with MobileML.",
+                "Designed animated UIs using Canvas API and tracked crashes via Fabric.io.",
+                "Integrated Firebase Cloud Messaging to notify users about flight updates in real time."
             }
         },
         new ExperienceEntry {
