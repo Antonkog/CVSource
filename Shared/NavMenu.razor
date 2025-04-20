@@ -14,22 +14,66 @@
         </button>
     </div>
 </div>
+<div class="@NavMenuCssClass nav-scrollable bg-dark" @onclick="ToggleNavMenu">
+    <nav class="flex-column px-3 py-4">
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
+        <!-- Experience Main -->
+        <div class="nav-item mb-2">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Experience
+                <i class="bi bi-truck m-2"></i> Experience
             </NavLink>
         </div>
-        <div class="nav-item px-3">
+
+        <!-- Subpages for each company -->
+        <div class="ms-3">
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/abona">
+                    <i class="bi bi-building m-2"></i> Abona
+                </NavLink>
+            </div>
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/kivi">
+                    <i class="bi bi-tv m-2"></i> KIVI
+                </NavLink>
+            </div>
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/myswit">
+                    <i class="bi bi-geo-alt m-2"></i> MySwit
+                </NavLink>
+            </div>
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/ozon">
+                    <i class="bi bi-airplane m-2"></i> Ozon
+                </NavLink>
+            </div>
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/onetrack">
+                    <i class="bi bi-activity m-2"></i> OneTrack
+                </NavLink>
+            </div>
+            <div class="nav-item mb-1">
+                <NavLink class="nav-link" href="experience/admobiclic">
+                    <i class="bi bi-bullseye m-2"></i> Admobiclic
+                </NavLink>
+            </div>
+            <div class="nav-item mb-3">
+                <NavLink class="nav-link" href="experience/ids">
+                    <i class="bi bi-people m-2"></i> IDS Outsource
+                </NavLink>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="nav-item mb-2">
             <NavLink class="nav-link" href="Education">
-                <span class="oi oi-plus" aria-hidden="true"></span> Education
+                <i class="bi bi-mortarboard m-2"></i> Education
             </NavLink>
         </div>
-        <div class="nav-item px-3">
+
+        <!-- Certificates -->
+        <div class="nav-item">
             <NavLink class="nav-link" href="Certificates">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Certificates
+                <i class="bi bi-award m-2"></i> Certificates
             </NavLink>
         </div>
     </nav>

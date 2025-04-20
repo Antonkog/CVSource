@@ -5,21 +5,7 @@
     @foreach (var entry in experienceList)
     {
         <div class="row mb-5 align-items-start">
-            <!-- Left: Tech Stack -->
-            <div class="col-md-4 mb-3">
-                <h5 class="d-flex align-items-center">
-                    <i class="bi bi-tools m-2 text-secondary"></i>
-                    Tech Stack
-                </h5>
-                <ul class="list-unstyled ms-4">
-                    @foreach (var tech in entry.TechStack)
-                    {
-                        <li>@tech</li>
-                    }
-                </ul>
-            </div>
-
-            <!-- Right: Experience -->
+            <!-- Left: Experience -->
             <div class="col-md-8">
                 <h5 class="d-flex align-items-center">
                     <i class="bi bi-briefcase m-2 text-secondary"></i>
@@ -30,6 +16,20 @@
                     @foreach (var detail in entry.Details)
                     {
                         <li>@detail</li>
+                    }
+                </ul>
+            </div>
+
+            <!-- Right: Tech Stack -->
+            <div class="col-md-4 mb-3">
+                <h5 class="d-flex align-items-center">
+                    <i class="bi bi-tools m-2 text-secondary"></i>
+                    Tech Stack
+                </h5>
+                <ul class="list-unstyled ms-4">
+                    @foreach (var tech in entry.TechStack)
+                    {
+                        <li>@tech</li>
                     }
                 </ul>
             </div>
