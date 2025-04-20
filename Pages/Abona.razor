@@ -3,29 +3,19 @@
 
 <div class="container mt-4">
     <h2 class="mb-4"><i class="bi bi-truck m-2"></i>DriverApp</h2>
-<p>
-    <strong>Driver App</strong> is a comprehensive logistics application designed for drivers to simplify transport order processing.
-    With features like client ID login, real-time order information, task timelines, and document sharing, it significantly improves operational efficiency.
-</p>
-<p>
-    Drivers can monitor their activities, send delay notifications, access navigation tools (Google, Sygic, TomTom, Waze), and manage dangerous goods with ease.
-    The app also supports capturing, editing, and exchanging documents, and it logs all actions and sync status with the server.
-</p>
-<p>
-    Server communication is handled reliably using sockets, while notifications are pushed via Firebase Cloud Messaging (FCM).
-    The app tracks driver behavior, sends analytics to Firebase, and reports logical errors and crash logs to Crashlytics — maintaining a crash rate of less than 0.2%.
-</p>
 
-    <ul>
-        <li>Displayed order statuses, delays, and dangerous goods.</li>
-        <li>Captured, edited, sent, and received documents between device and server.</li>
-        <li>Started and finished order activities with full activity tracking.</li>
-        <li>Sent task notifications and updates using Firebase Cloud Messaging (FCM).</li>
-        <li>Integrated navigation with Google, Sygic, TomTom, and Waze (user-selectable).</li>
-        <li>Reported device location via socket connection to the backend.</li>
-        <li>Logged all driver actions and synced protocol status with the server.</li>
-        <li>Sent usage analytics to Firebase, and logged logical errors + crashes to Crashlytics (crash rate &lt; 0.2%).</li>
-    </ul>
+    <p>
+        <strong>Driver App</strong> is a comprehensive logistics application designed for drivers to simplify transport order processing.
+        With features like client ID login, real-time order information, task timelines, and document sharing, it significantly improves operational efficiency.
+    </p>
+    <p>
+        Drivers can monitor their activities, send delay notifications, access navigation tools (Google, Sygic, TomTom, Waze), and manage dangerous goods with ease.
+        The app also supports capturing, editing, and exchanging documents, and it logs all actions and sync status with the server.
+    </p>
+    <p>
+        Server communication is handled reliably using sockets, while notifications are pushed via Firebase Cloud Messaging (FCM).
+        The app tracks driver behavior, sends analytics to Firebase, and reports logical errors and crash logs to Crashlytics — maintaining a crash rate of less than 0.2%.
+    </p>
 
     <h5 class="mt-5">📷 Screenshots</h5>
     <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
@@ -33,19 +23,58 @@
         {
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
                 <div class="card h-100 border-0">
-                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image" />
+                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image"/>
                 </div>
             </div>
         }
     </div>
+    <!-- ERP Integration Section -->
+    <div class="mt-5">
+        <h4 class="mb-3"><i class="bi bi-window m-2"></i>ERP Integration – AbonaERP</h4>
+        <p>
+            DriverApp was tightly integrated with <strong>AbonaERP</strong> — the core business platform used by the company.
+            In addition to mobile development, I contributed to ERP enhancements:
+        </p>
+        <ul>
+            <li>Integrated DriverApp with ERP for syncing transport orders and documents.</li>
+            <li>Simplified complex data queries using DevExpress to enhance search and usability.</li>
+            <li>Extended Windows Forms interfaces to support user input and driver communication logic.</li>
+        </ul>
+
+       <h5 class="mt-4">📷 ERP Integration Screens</h5>
+       <div class="scrolling-wrapper d-flex flex-row overflow-auto py-3 px-2">
+           @foreach (var image in ErpImages)
+           {
+               <div class="flex-shrink-0 me-4" style="width: 70vw;">
+                   <div class="card h-100 border-0">
+                       <img src="@($"images/{image}")"
+                            class="img-fluid rounded shadow-sm"
+                            style="height: 400px; object-fit: cover; width: 100%;"
+                            alt="@image" />
+                   </div>
+               </div>
+           }
+       </div>
+    </div>
 </div>
 
 @code {
-    // List of images from wwwroot/images
+
     private List<string> ImageFiles = new()
     {
-        "mainscreen.png", "delayReasons.png", "addDelay.png", "docs.png", "addDoc.png", "erpdoc.png",
-        "dangergoods.png", "activity.png", "unloading.png", "loading.png", "timeline.png", "protocol.png",
-        "contacts.png", "notifications.png", "settings.png", "info.png", "pallets.png", "swap.png"
+        "settings.png", "mainscreen.png", "swap.png", "activity.png", "loading.png", "delayReasons.png", "addDelay.png", "docs.png", "addDoc.png",
+        "dangergoods.png", "unloading.png", "timeline.png", "protocol.png",
+        "contacts.png", "notifications.png", "info.png", "pallets.png",
     };
+
+    private List<string> ErpImages = new()
+    {
+        "erporders.png",
+        "erpladestelle.png",
+        "erptruck.png",
+        "erproute.png",
+        "erpdoc.png"
+    };
+
+}
 }
