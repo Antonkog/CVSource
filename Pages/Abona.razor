@@ -63,25 +63,59 @@
         a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management, 
         time tracking, and communication, all within a responsive web interface.
     </p>
-    
-    <h5 class="mt-4">📷 DriverWeb Screens</h5>
-    <div class="d-flex flex-row overflow-auto py-2">
-        @foreach (var image in DriverWebImg)
+  <h5 class="mt-4">📷 DriverWeb Screens</h5>
+  
+  <!-- 📌 Transport Task Section -->
+  <h4 class="mt-4">Transport task page showing whole order, even when it is several trucks.</h4>
+  
+  <!-- Mobile Screens -->
+  <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+        @foreach (var image in DriverWebImgMobile)
         {
-            <div class="me-3" style="width: 60vw;">
-                <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image" />
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
+                <div class="card h-100 border-0">
+                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image"/>
+                </div>
             </div>
         }
     </div>
-     <div class="d-flex flex-row overflow-auto py-2">
-            @foreach (var image in DriverWebImgMobile)
-            {
-                <div class="me-3" style="width: 60vw;">
-                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image" />
+  
+  <!-- Desktop Screens -->
+  <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
+      @foreach (var image in DriverWebImg)
+      {
+          <div style="width: 70vw; flex-shrink: 0;">
+              <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image" />
+          </div>
+      }
+  </div>
+  
+  <!-- 📌 Driver Page Section -->
+  <h4 class="mt-4">Driver page showing tracking tasks, dedicated for one driver.</h4>
+  
+  <!-- Mobile Screens -->
+   <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+        @foreach (var image in DriverWebImgMobile2)
+        {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
+                <div class="card h-100 border-0">
+                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image"/>
                 </div>
-            }
-        </div>
+            </div>
+        }
+    </div>
+  
+  <!-- Desktop Screens -->
+  <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
+      @foreach (var image in DriverWebImg2)
+      {
+          <div style="width: 70vw; flex-shrink: 0;">
+              <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image" />
+          </div>
+      }
+  </div>
 
+    
     <h4 class="mt-5"><i class="bi bi-compass m-2"></i>Navigation App</h4>
     <p>
         Alongside DriverWeb, we developed a dedicated <strong>Navigation App</strong>, which integrates seamlessly via deep links. 
@@ -120,5 +154,24 @@
         "ttmd.png", "ttmd2.png", "ttmd3.png"
     };
 
-}
+    
+    private List<string> DriverWebImg2 = new()
+    {
+        "drweb.png",
+        "drweb2.png",
+        "drweb3.png",
+        "drweb4.png",
+        "drweb5.png",
+        "drweb6.png",
+        
+    };
+
+    private List<string> DriverWebImgMobile2 = new()
+    {
+        "drwebmd1.png",
+        "drwebmd2.png",
+        "drwebmd3.png",
+        "drwebmd4.png",
+        "drwebmd5.png"
+    };
 }
