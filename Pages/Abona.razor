@@ -41,21 +41,57 @@
             <li>Extended Windows Forms interfaces to support user input and driver communication logic.</li>
         </ul>
 
-       <h5 class="mt-4">📷 ERP Integration Screens</h5>
-       <div class="scrolling-wrapper d-flex flex-row overflow-auto py-3 px-2">
-           @foreach (var image in ErpImages)
-           {
-               <div class="flex-shrink-0 me-4" style="width: 70vw;">
-                   <div class="card h-100 border-0">
-                       <img src="@($"images/{image}")"
-                            class="img-fluid rounded shadow-sm"
-                            style="height: 400px; object-fit: cover; width: 100%;"
-                            alt="@image" />
-                   </div>
-               </div>
-           }
-       </div>
+        <h5 class="mt-4">📷 ERP Integration Screens</h5>
+        <div class="scrolling-wrapper d-flex flex-row overflow-auto py-3 px-2">
+            @foreach (var image in ErpImages)
+            {
+                <div class="flex-shrink-0 me-4" style="width: 70vw;">
+                    <div class="card h-100 border-0">
+                        <img src="@($"images/{image}")"
+                             class="img-fluid rounded shadow-sm"
+                             style="height: 400px; object-fit: cover; width: 100%;"
+                             alt="@image" />
+                    </div>
+                </div>
+            }
+        </div>
     </div>
+    
+    <h4 class="mt-5"><i class="bi bi-globe m-2"></i>DriverWeb</h4>
+    <p>
+        The <strong>Driver App</strong> was deprecated, and its core functionalities were integrated into <strong>DriverWeb</strong> — 
+        a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management, 
+        time tracking, and communication, all within a responsive web interface.
+    </p>
+    
+    <h5 class="mt-4">📷 DriverWeb Screens</h5>
+    <div class="d-flex flex-row overflow-auto py-2">
+        @foreach (var image in DriverWebImg)
+        {
+            <div class="me-3" style="width: 60vw;">
+                <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image" />
+            </div>
+        }
+    </div>
+     <div class="d-flex flex-row overflow-auto py-2">
+            @foreach (var image in DriverWebImgMobile)
+            {
+                <div class="me-3" style="width: 60vw;">
+                    <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" alt="@image" />
+                </div>
+            }
+        </div>
+
+    <h4 class="mt-5"><i class="bi bi-compass m-2"></i>Navigation App</h4>
+    <p>
+        Alongside DriverWeb, we developed a dedicated <strong>Navigation App</strong>, which integrates seamlessly via deep links. 
+        It uses socket communication to send real-time location data to the server and provides turn-by-turn navigation powered by Here Maps.
+    </p>
+    <p>
+        The app constructs the navigation route based on route points received from the server, ensuring accurate and up-to-date driving instructions 
+        for transport routes.
+    </p>
+
 </div>
 
 @code {
@@ -74,6 +110,14 @@
         "erptruck.png",
         "erproute.png",
         "erpdoc.png"
+    };
+    private List<string> DriverWebImg = new()
+    {
+        "ttdelay.png", "ttfile.png", "ttmain.png"
+    };
+    private List<string> DriverWebImgMobile = new()
+    {
+        "ttmd.png", "ttmd2.png", "ttmd3.png"
     };
 
 }
