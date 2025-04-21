@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="wwwroot\gifs\" />
       <Folder Include="wwwroot\videos\" />
     </ItemGroup>
 

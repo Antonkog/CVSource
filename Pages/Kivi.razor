@@ -1,6 +1,50 @@
 @page "/experience/kivi"
 <h3>Kivi</h3>
-
-@code {
+<div class="container mt-4">
+    <h2 class="mb-4">
+        <i class="bi bi-tv m-2"></i>KiviTv Update, Launcher Remote.
+    </h2>
+  
+    <p>
+        <!-- Your description or content about KiviUpdate and Launcher goes here -->
+        Here you can provide details about KiviUpdate and Launcher, the purpose, and features.
+    </p>
+  
+    <!-- Responsive Images -->
+    <div class="kivi-images">
+       <!-- TV Interface Images -->
+         <img src="images/kiviTv.png" alt="Kivi TV Image 1" class="img-fluid mb-3">
+         <img src="images/kiviTv2.png" alt="Kivi TV Image 2" class="img-fluid mb-3">
+         <img src="images/kiviTv3.png" alt="Kivi TV Image 3" class="img-fluid mb-3">
+       
+       <h5 class="mt-5">📷 Screenshots</h5>
+       <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+               @foreach (var image in KiviRemote)
+               {
+                   <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
+                       <div class="card border-0">
+                            <img src=@image class="img-fluid rounded shadow-sm" alt="@image"/>
+                       </div>
+                   </div>
+               }
+           </div>
+    </div>
+</div>
+@code
+{
     
+    private List<string> KiviRemote = new()
+    {
+        "images/kiviremote1.jpg",
+        "images/kiviremote2.jpg",
+        "images/kiviremote3.jpg",
+        "images/kiviremote4.jpg",
+        "images/kiviremote5.jpg",
+        "images/kiviremote6.jpg",
+        "images/kiviremote7.jpg",
+        "images/kiviremote8.jpg",
+        "images/kiviremote9.jpg",
+        "images/kiviremote10.jpg"
+    };
+
 }
