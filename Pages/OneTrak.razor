@@ -1,6 +1,97 @@
 @page "/experience/onetrak"
-<h3>OneTrak</h3>
 
-@code {
-    
+<h3>OneTrak LLC</h3>
+<div>
+    <!-- About Section -->
+    <section>
+        <h4>About</h4>
+        <p>
+            Onetrak is a Russian manufacturer and developer of IT solutions in healthcare and wellness, specializing in the remote monitoring of individuals and patients. The company focuses on developing predictive and preventative measures to enhance health and well-being.
+        </p>
+        <p>
+            <strong>Website:</strong> <a href="https://onetrak.ru" target="_blank">onetrak.ru</a>
+        </p>
+    </section>
+
+    <!-- Technological Innovations Section -->
+    <section>
+        <h4>Technological Innovations</h4>
+        <p>
+            Onetrak's smart bracelets allow users to monitor various health parameters, providing valuable data for both individuals and healthcare providers. These devices play a crucial role in improving health management and early detection of issues.
+        </p>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section>
+        <h4>Collaborations</h4>
+        <p>
+            Onetrak has been involved in various initiatives aimed at integrating digital solutions into healthcare. For instance, the company participated in the RUSUMMIT Conference on Digital Economy & Industry 4.0 in Russia, showcasing its contributions to digital healthcare.
+        </p>
+        <p>
+            For more details, refer to the RUSUMMIT Conference Handbook: <a href="https://endurancelasers.com/wp-content/uploads/2018/08/RUSummit_Handbook_Speaker_11.pdf?utm_source=chatgpt.com" target="_blank">RUSUMMIT Handbook</a>
+        </p>
+    </section>
+    <h5 class="mt-5">📷 Devices</h5>
+    <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+        @foreach (var image in OneTrakImg)
+        {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
+                <div class="card border-0">
+                    <img src=@image class="img-fluid rounded shadow-sm" alt="@image"/>
+                </div>
+            </div>
+        }
+    </div>
+    <h5 class="mt-5">📷 Screens</h5>
+    <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+        @foreach (var image in OneTrakScreens)
+        {
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
+                <div class="card border-0">
+                    <img src=@image class="img-fluid rounded shadow-sm" alt="@image"/>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code
+{
+
+    private List<string> OneTrakImg = new()
+    {
+        "images/onetraks.jpg",
+        "images/onetraks1.jpg",
+        "images/onetraks2.jpg",
+        "images/onetraks3.jpg",
+        "images/onetraks4.jpg"
+    };
+    private List<string> OneTrakScreens = new()
+    {
+        "images/onetrak1.png",
+        "images/onetrak2.png",
+        "images/onetrak3.png",
+        "images/onetrak4.png",
+        "images/onetrak5.png",
+        "images/onetrak6.png",
+        "images/onetrak7.png",
+        "images/onetrak8.png",
+        "images/onetrak9.png",
+        "images/onetrak10.png",
+        "images/onetrak11.png",
+        "images/onetrak12.png",
+        "images/onetrak13.png",
+        "images/onetrak14.png",
+        "images/onetrak15.png",
+        "images/onetrak16.png",
+        "images/onetrak17.png",
+        "images/onetrak18.png",
+        "images/onetrak19.png",
+        "images/onetrak20.png",
+        "images/onetrak21.png",
+        "images/onetrak22.png",
+        "images/onetrak23.png",
+        "images/onetrak24.png",
+        "images/onetrak25.png"
+    };
 }
