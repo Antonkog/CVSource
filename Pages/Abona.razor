@@ -2,6 +2,27 @@
 <h3>Abona Deutschland GmbH</h3>
 
 <div class="container mt-4">
+    <section class="mb-5">
+        <div>
+            <h4>Overview</h4>
+            <p><strong>Industry:</strong> Telecommunications & Digital Services</p>
+            <p><strong>Founded:</strong> 2010</p>
+            <p><strong>Headquarters:</strong> Germany</p>
+            <p>
+                <strong>Website:</strong> <a href="https://www.abona.de" target="_blank">abona.de</a>
+            </p>
+
+            <h4>About</h4>
+            <p>Abona Deutschland GmbH is a leading provider of telecommunications and digital services in Germany. The company specializes in offering affordable mobile phone services, broadband internet, and digital TV packages to both individual customers and businesses. With a focus on customer satisfaction, Abona Deutschland provides competitive pricing and a variety of service options to meet diverse needs in the telecommunications sector.</p>
+
+            <h4>Services</h4>
+            <p>The company offers a wide range of services, including mobile phone contracts, broadband internet solutions, and digital TV services. Abona Deutschland is known for its flexible pricing plans, tailored to both personal and business use, ensuring a wide customer base across Germany.</p>
+
+            <h4>Recognition</h4>
+            <p>Abona Deutschland GmbH has earned a strong reputation for customer service and has been recognized for its innovative solutions in the telecommunications industry.</p>
+        </div>
+    </section>
+    
     <h2 class="mb-4"><i class="bi bi-truck m-2"></i>DriverApp</h2>
 
     <p>
@@ -50,26 +71,26 @@
                         <img src="@($"images/{image}")"
                              class="img-fluid rounded shadow-sm"
                              style="height: 400px; object-fit: cover; width: 100%;"
-                             alt="@image" />
+                             alt="@image"/>
                     </div>
                 </div>
             }
         </div>
     </div>
-    
+
     <h4 class="mt-5"><i class="bi bi-globe m-2"></i>DriverWeb</h4>
     <p>
-        The <strong>Driver App</strong> was deprecated, and its core functionalities were integrated into <strong>DriverWeb</strong> — 
-        a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management, 
+        The <strong>Driver App</strong> was deprecated, and its core functionalities were integrated into <strong>DriverWeb</strong> —
+        a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management,
         time tracking, and communication, all within a responsive web interface.
     </p>
-  <h5 class="mt-4">📷 DriverWeb Screens</h5>
-  
-  <!-- 📌 Transport Task Section -->
-  <h4 class="mt-4">Transport task page showing whole order, even when it is several trucks.</h4>
-  
-  <!-- Mobile Screens -->
-  <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+    <h5 class="mt-4">📷 DriverWeb Screens</h5>
+
+    <!-- 📌 Transport Task Section -->
+    <h4 class="mt-4">Transport task page showing whole order, even when it is several trucks.</h4>
+
+    <!-- Mobile Screens -->
+    <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
         @foreach (var image in DriverWebImgMobile)
         {
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
@@ -79,22 +100,22 @@
             </div>
         }
     </div>
-  
-  <!-- Desktop Screens -->
-  <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
-      @foreach (var image in DriverWebImg)
-      {
-          <div style="width: 70vw; flex-shrink: 0;">
-              <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image" />
-          </div>
-      }
-  </div>
-  
-  <!-- 📌 Driver Page Section -->
-  <h4 class="mt-4">Driver page showing tracking tasks, dedicated for one driver.</h4>
-  
-  <!-- Mobile Screens -->
-   <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
+
+    <!-- Desktop Screens -->
+    <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
+        @foreach (var image in DriverWebImg)
+        {
+            <div style="width: 70vw; flex-shrink: 0;">
+                <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image"/>
+            </div>
+        }
+    </div>
+
+    <!-- 📌 Driver Page Section -->
+    <h4 class="mt-4">Driver page showing tracking tasks, dedicated for one driver.</h4>
+
+    <!-- Mobile Screens -->
+    <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
         @foreach (var image in DriverWebImgMobile2)
         {
             <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-3 pe-2">
@@ -104,25 +125,25 @@
             </div>
         }
     </div>
-  
-  <!-- Desktop Screens -->
-  <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
-      @foreach (var image in DriverWebImg2)
-      {
-          <div style="width: 70vw; flex-shrink: 0;">
-              <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image" />
-          </div>
-      }
-  </div>
 
-    
+    <!-- Desktop Screens -->
+    <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
+        @foreach (var image in DriverWebImg2)
+        {
+            <div style="width: 70vw; flex-shrink: 0;">
+                <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image"/>
+            </div>
+        }
+    </div>
+
+
     <h4 class="mt-5"><i class="bi bi-compass m-2"></i>Navigation App</h4>
     <p>
-        Alongside DriverWeb, we developed a dedicated <strong>Navigation App</strong>, which integrates seamlessly via deep links. 
+        Alongside DriverWeb, we developed a dedicated <strong>Navigation App</strong>, which integrates seamlessly via deep links.
         It uses socket communication to send real-time location data to the server and provides turn-by-turn navigation powered by Here Maps.
     </p>
     <p>
-        The app constructs the navigation route based on route points received from the server, ensuring accurate and up-to-date driving instructions 
+        The app constructs the navigation route based on route points received from the server, ensuring accurate and up-to-date driving instructions
         for transport routes.
     </p>
 
@@ -145,16 +166,18 @@
         "erproute.png",
         "erpdoc.png"
     };
+
     private List<string> DriverWebImg = new()
     {
         "ttdelay.png", "ttfile.png", "ttmain.png"
     };
+
     private List<string> DriverWebImgMobile = new()
     {
         "ttmd.png", "ttmd2.png", "ttmd3.png"
     };
 
-    
+
     private List<string> DriverWebImg2 = new()
     {
         "drweb.png",
@@ -163,7 +186,6 @@
         "drweb4.png",
         "drweb5.png",
         "drweb6.png",
-        
     };
 
     private List<string> DriverWebImgMobile2 = new()
@@ -174,4 +196,5 @@
         "drwebmd4.png",
         "drwebmd5.png"
     };
+
 }
