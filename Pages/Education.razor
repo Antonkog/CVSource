@@ -17,9 +17,9 @@
             <!-- Right: Institution Info -->
             <div class="col-md-8">
                 <h5 class="d-flex align-items-center">
-                    <i class="bi bi-building m-2 text-secondary"></i>
-                    @entry.Institution
+                    <a href="@entry.Site" target="_blank">@entry.Institution</a>
                 </h5>
+
                 <ul class="ms-4">
                     @foreach (var detail in entry.Details)
                     {
@@ -49,6 +49,7 @@
     private class EducationEntry
     {
         public string Degree { get; set; } = string.Empty;
+        public string Site { get; set; } = string.Empty;
         public string Institution { get; set; } = string.Empty;
         public string Period { get; set; } = string.Empty;
         public List<string> Details { get; set; } = new();
@@ -63,18 +64,21 @@
     private List<EducationEntry> educationList = new()
     {
         new EducationEntry {
-            Degree = "Bachelor in Informatics and Computer Science",
-            Institution = "Igor Sikorsky Kyiv Polytechnic Institute – Faculty of Informatics and Computer Science, Kyiv, Ukraine",
+            Degree = "Bachelor of Science in System Analysis and Information Technologies",
+            Institution = "National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute' – Institute for Applied System Analysis (IASA), Kyiv, Ukraine",
             Period = "2017 – 2021",
+            Site="https://iasa.kpi.ua",
             Details = new List<string>
             {
-                "Specialized in software development and computer science."
+                "Specialization: Systems and Analysis and Artificial Intelligence",
+                "Field of Study: 122 – Computer Science"
             }
         },
         new EducationEntry {
             Degree = "Mobile Development for Android",
             Institution = "STEP IT Academy, Donetsk, Ukraine",
             Period = "2013 – 2014",
+            Site="https://itstep.org/about-academy",
             Details = new List<string>
             {
                 "Focused on mobile development and Android apps."
@@ -82,17 +86,20 @@
         },
         new EducationEntry {
             Degree = "Bachelor in International Economics",
-            Institution = "National University, Donetsk, Ukraine",
+            Institution = "Vasyl’ Stus Donetsk National University, Donetsk, Ukraine",
             Period = "2008 – 2012",
+            Site="https://www.donnu.edu.ua/en/about/",
             Details = new List<string>
             {
-                "Studied economics and business management."
+                "Specialty: Economics and Entrepreneurship",
+                "Specialization: International Economics"
             }
         },
         new EducationEntry {
             Degree = "Primary- / Secondary School",
-            Institution = "Donetsk, Ukraine",
+            Institution = "17 School, Donetsk, Ukraine",
             Period = "1997 – 2007",
+            Site = "https://17.agni-age.net",
             Details = new List<string>
             {
                 "Basic education and development."
