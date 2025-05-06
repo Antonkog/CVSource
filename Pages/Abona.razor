@@ -42,6 +42,7 @@
         The app tracks driver behavior, sends analytics to Firebase, and reports logical errors and crash logs to Crashlytics — maintaining a crash rate of less than 0.2%.
     </p>
 
+    @*
     <h5 class="mt-5">📷 Screenshots</h5>
     <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
         @foreach (var image in ImageFiles)
@@ -52,7 +53,7 @@
                 </div>
             </div>
         }
-    </div>
+    </div>*@
     <!-- ERP Integration Section -->
     <div class="mt-5">
         <h4 class="mb-3"><i class="bi bi-window m-2"></i>ERP Integration – AbonaERP</h4>
@@ -85,10 +86,11 @@
 
     <h4 class="mt-5"><i class="bi bi-globe m-2"></i>DriverWeb</h4>
     <p>
-        The <strong>Driver App</strong> was deprecated, and its core functionalities were integrated into <strong>DriverWeb</strong> —
-        a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management,
+        DriverWeb a modern web-based logistics platform. DriverWeb offers drivers streamlined access to transport tasks, file management,
         time tracking, and communication, all within a responsive web interface.
     </p>
+    
+    @*
     <h5 class="mt-4">📷 DriverWeb Screens</h5>
 
     <!-- 📌 Transport Task Section -->
@@ -140,8 +142,9 @@
             </div>
         }
     </div>
-</div>
+*@
 
+</div>
 @code {
 
     private List<string> ImageFiles = new()
