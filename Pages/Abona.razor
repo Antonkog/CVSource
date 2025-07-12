@@ -27,10 +27,6 @@
         </div>
     </section>
     
-    <div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-md shadow-sm max-w-2xl mx-auto my-4">
-        <strong>Project Visibility Notice:</strong> Due to company policy, I am not permitted to share screenshots of the work I’ve done, including crash analytics or in-app visuals. This is to protect proprietary ideas and prevent potential misuse. However, I'm proud to note that the latest release of the app I developed is <strong>99.96% crash-free</strong> and actively used by <strong>over 3,000 trucks</strong> in production.
-    </div>
-    
     <h2 class="mb-4"><i class="bi bi-truck m-2"></i>DriverApp</h2>
 
     <p>
@@ -46,7 +42,6 @@
         The app tracks driver behavior, sends analytics to Firebase, and reports logical errors and crash logs to Crashlytics — maintaining a crash rate of less than 0.2%.
     </p>
 
-    @*
     <h5 class="mt-5">📷 Screenshots</h5>
     <div class="scrolling-wrapper row flex-row flex-nowrap overflow-auto">
         @foreach (var image in ImageFiles)
@@ -57,7 +52,7 @@
                 </div>
             </div>
         }
-    </div>*@
+    </div>
     <!-- ERP Integration Section -->
     <div class="mt-5">
         <h4 class="mb-3"><i class="bi bi-window m-2"></i>ERP Integration – AbonaERP</h4>
@@ -71,6 +66,11 @@
             <li>Extended Windows Forms interfaces to support user input and driver communication logic.</li>
         </ul>
         
+       <div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-md shadow-sm max-w-2xl mx-auto my-4">
+           <strong>Project Visibility Notice:</strong> Due to company policy, I am not permitted to share ERP screenshots.<br>
+           This is to protect proprietary ideas and prevent potential misuse.
+        </div>
+     
         @*
         <h5 class="mt-4">📷 ERP Integration Screens</h5>
         <div class="scrolling-wrapper d-flex flex-row overflow-auto py-3 px-2">
@@ -94,7 +94,7 @@
         time tracking, and communication, all within a responsive web interface.
     </p>
     
-    @*
+    
     <h5 class="mt-4">📷 DriverWeb Screens</h5>
 
     <!-- 📌 Transport Task Section -->
@@ -112,7 +112,7 @@
         }
     </div>
 
-    <!-- Desktop Screens -->
+    @*<!-- Desktop Screens -->
     <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
         @foreach (var image in DriverWebImg)
         {
@@ -120,7 +120,7 @@
                 <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image"/>
             </div>
         }
-    </div>
+    </div>*@
 
     <!-- 📌 Driver Page Section -->
     <h4 class="mt-4">Driver page showing tracking tasks, dedicated for one driver.</h4>
@@ -137,7 +137,7 @@
         }
     </div>
 
-    <!-- Desktop Screens -->
+    @*<!-- Desktop Screens -->
     <div class="d-flex flex-row overflow-auto gap-4 py-3 px-2">
         @foreach (var image in DriverWebImg2)
         {
@@ -145,8 +145,7 @@
                 <img src="@($"images/{image}")" class="img-fluid rounded shadow-sm" style="height: 400px; object-fit: cover; width: 100%;" alt="@image"/>
             </div>
         }
-    </div>
-*@
+    </div>*@
 
 </div>
 @code {
