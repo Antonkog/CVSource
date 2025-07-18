@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<div class="container mt-5">
+<div class="mt-5">
     <h2 class="mb-4">Experience</h2>
     @foreach (var entry in experienceList)
     {
@@ -49,7 +49,7 @@
     private List<ExperienceEntry> experienceList = new()
     {
         new ExperienceEntry {
-            Company = "Abona Deutschland GmbH",
+            Company = "Abona Deutschland",
             Period = "07.2020 – 06.2025",
             TechStack = new() {"Kotlin coroutines", "Kotlin Flows","Jetpack Compose", "RoomDB", "Android HILT for DI", "Retrofit", "Kotlin Multiplatform", "C#","JS", "Blazor", "Bootstrap", "Azure DevOps" },
             Details = new() {
@@ -82,7 +82,7 @@
             }
         },
         new ExperienceEntry {
-            Company = "Ozon Ltd.",
+            Company = "Ozon",
             Period = "11.2015 – 11.2016",
             TechStack = new() { "Java","Kotlin", "SQLite", "FCM", "MobileML", "XML" },
             Details = new() {
@@ -93,7 +93,7 @@
             }
         },
         new ExperienceEntry {
-            Company = "OneTrack LLC",
+            Company = "OneTrack",
             Period = "04.2015 – 11.2015",
             TechStack = new List<string> { "Java", "BLE", "FatSecret API", "SQLite", "Google Protobuf" },
             Details = new List<string>
@@ -104,7 +104,7 @@
             }
         },
         new ExperienceEntry {
-            Company = "Admobiclic LLC",
+            Company = "Admobiclic",
             Period = "06.2014 – 04.2015",
             TechStack = new List<string> { "Facebook Ads", "VK", "Twitter", "Opera Mediaworks", "CPM/CPC/CPA Analysis" },
             Details = new List<string>
